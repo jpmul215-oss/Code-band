@@ -1,0 +1,492 @@
+```html
+<!DOCTYPE html>
+<html lang<html lang="en" class="scroll-smooth">
+    ="en" class="scroll-smooth">
+<head>
+    <meta charse    <meta charset="UTF-8">
+    t="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Clearer View | Official Website</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Custom scrollbar for a darker theme */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #09090b; }
+        ::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #71717a; }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-300 antialiased flex flex-col min-h-screen selection:bg-rose-600 selection:text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="text-2xl font-black text-white tracking-widest uppercase">A CLEARER VIEW</a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center text-sm font-semibold tracking-wide uppercase">
+                    <a href="#music" class="text-zinc-400 hover:text-white transition-colors">Music</a>
+                    <a href="#tour" class="text-zinc-400 hover:text-white transition-colors">Tour</a>
+                    <a href="#exclusive" class="text-zinc-400 hover:text-white transition-colors">Unreleased</a>
+                    <a href="#contact" class="text-zinc-400 hover:text-white transition-colors">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-zinc-400 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main App Container -->
+    <main class="w-full flex-grow">
+
+    <!-- Home Sections (Hero, Music) -->
+    <div class="page-view page-home w-full">
+
+    <!-- Hero Section -->
+    <header id="home" class="relative flex items-center justify-center min-h-[60vh] overflow-hidden">
+        <!-- Background Overlay -->
+        <div class="absolute inset-0 z-0 bg-gradient-to-b from-zinc-900 to-zinc-950"></div>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto space-y-6">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter uppercase">
+                New Album <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-purple-600">Out Now</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-zinc-300 font-light">Experience "The Sound of Survival"</p>
+            <div class="pt-6">
+                <a href="#music" class="inline-block bg-white text-zinc-950 px-10 py-4 rounded-full font-bold uppercase tracking-wide hover:bg-zinc-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.2)]">Listen Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Music Platforms & Previews Section -->
+    <section id="music" class="py-24 bg-zinc-950 border-t border-zinc-900">
+        <div class="max-w-6xl mx-auto px-4">
+            
+            <!-- Album Previews -->
+            <div class="mb-20">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-2 uppercase tracking-widest">Album Previews</h2>
+                    <p class="text-zinc-400">Preview the album</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Track 1 -->
+                    <div class="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800 hover:border-zinc-700 transition-colors">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Running for the Door</h3>
+                            </div>
+                            <span class="text-xs text-zinc-500 font-mono bg-zinc-950 px-2 py-1 rounded">0:30</span>
+                        </div>
+                        
+                        <!-- Simulated Audio Player -->
+                        <div class="flex items-center gap-4 mb-6">
+                            <button class="w-10 h-10 flex-shrink-0 bg-white text-black rounded-full flex items-center justify-center hover:bg-rose-500 hover:text-white transition-colors">
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </button>
+                            <div class="flex-grow w-full bg-zinc-950 rounded-full h-1.5 overflow-hidden">
+                                <div class="bg-gradient-to-r from-rose-500 to-purple-600 h-1.5 rounded-full w-1/3"></div>
+                            </div>
+                        </div>
+
+                        <!-- Lyrics Toggle -->
+                        <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="text-xs uppercase tracking-widest text-zinc-400 hover:text-white flex items-center gap-1 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path></svg>
+                            Read Lyrics
+                        </button>
+                        <!-- Lyrics Box -->
+                        <div class="hidden mt-4 bg-black/50 p-4 rounded-xl border border-zinc-800/50 h-48 overflow-y-auto text-sm text-zinc-400 italic">
+                            You got nothing but the best intentions<br>
+                            More than I could ask for<br>
+                            But there's a voice inside my head that keeps me<br>
+                            Running for the door<br>
+                            I swear I want to stay this time<br>
+                            But I've been here before<br>
+                            I just can't do this<br>
+                            Can't do this anymore<br><br>
+                            My heart is beating through my chest<br>
+                            Like it's trying to start a war<br>
+                            Every step that brings you closer<br>
+                            Makes me want to run some more<br>
+                            My heart is pounding too fast<br>
+                            How long can this feeling last<br>
+                            It's not you, I'm just haunted by my past<br>
+                            When you see me reaching for the door<br>
+                            Know I'm fighting something, something I can't ignore
+                        </div>
+                    </div>
+
+                    <!-- Track 2 -->
+                    <div class="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800 hover:border-zinc-700 transition-colors">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Woe Is Me</h3>
+                            </div>
+                            <span class="text-xs text-zinc-500 font-mono bg-zinc-950 px-2 py-1 rounded">0:30</span>
+                        </div>
+                        
+                        <!-- Simulated Audio Player -->
+                        <div class="flex items-center gap-4 mb-6">
+                            <button class="w-10 h-10 flex-shrink-0 bg-white text-black rounded-full flex items-center justify-center hover:bg-rose-500 hover:text-white transition-colors">
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </button>
+                            <div class="flex-grow w-full bg-zinc-950 rounded-full h-1.5 overflow-hidden">
+                                <div class="bg-gradient-to-r from-rose-500 to-purple-600 h-1.5 rounded-full w-0"></div>
+                            </div>
+                        </div>
+
+                        <!-- Lyrics Toggle -->
+                        <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="text-xs uppercase tracking-widest text-zinc-400 hover:text-white flex items-center gap-1 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path></svg>
+                            Read Lyrics
+                        </button>
+                        <!-- Lyrics Box -->
+                        <div class="hidden mt-4 bg-black/50 p-4 rounded-xl border border-zinc-800/50 h-48 overflow-y-auto text-sm text-zinc-400 italic">
+                            How did you know that I'd be here<br>
+                            My mind's gone dark, that much is clear<br>
+                            Obsessive thoughts, my twisted dear<br>
+                            Compulsions whisper everything I fear<br>
+                            Would I be here?<br>
+                            Should I be here?<br>
+                            No thought escapes, they cling to me<br>
+                            My own decisions won't set me free<br>
+                            Oh whoa is me<br>
+                            I face the mirror, don't know that face<br>
+                            It's getting clearer<br>
+                            My mind keeps racing, won't let me be<br>
+                            Please wake me from this nightmare... set me free
+                        </div>
+                    </div>
+
+                    <!-- Track 3 -->
+                    <div class="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800 hover:border-zinc-700 transition-colors">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-white">The Sound of Survival</h3>
+                            </div>
+                            <span class="text-xs text-zinc-500 font-mono bg-zinc-950 px-2 py-1 rounded">0:30</span>
+                        </div>
+                        
+                        <!-- Simulated Audio Player -->
+                        <div class="flex items-center gap-4 mb-6">
+                            <button class="w-10 h-10 flex-shrink-0 bg-white text-black rounded-full flex items-center justify-center hover:bg-rose-500 hover:text-white transition-colors">
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </button>
+                            <div class="flex-grow w-full bg-zinc-950 rounded-full h-1.5 overflow-hidden">
+                                <div class="bg-gradient-to-r from-rose-500 to-purple-600 h-1.5 rounded-full w-0"></div>
+                            </div>
+                        </div>
+
+                        <!-- Lyrics Toggle -->
+                        <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="text-xs uppercase tracking-widest text-zinc-400 hover:text-white flex items-center gap-1 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path></svg>
+                            Read Lyrics
+                        </button>
+                        <!-- Lyrics Box -->
+                        <div class="hidden mt-4 bg-black/50 p-4 rounded-xl border border-zinc-800/50 h-48 overflow-y-auto text-sm text-zinc-400 italic">
+                            There's nothing left to say<br>
+                            I thought I wasn't fixable<br>
+                            But I fought to be okay<br>
+                            Just survival<br>
+                            And seeing the light of another day<br>
+                            My instinct is to keep running<br>
+                            But for a little while I just might stay<br>
+                            This is the sound of survival<br>
+                            Looking in the morning sky for a new day's arrival<br>
+                            The future is bright still<br>
+                            A new year of memories and all the blank pages<br>
+                            I got left to fill
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Streaming Links -->
+            <div class="text-center border-t border-zinc-800 pt-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 uppercase tracking-widest">Stream Full Album</h2>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <!-- Spotify -->
+                    <a href="https://open.spotify.com/artist/1TtoQnmAsEBuYi1GyKI7KX?si=odbRuW1CSS2wQPdR3G_Bnw&utm_source=copy-link" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto flex items-center justify-center gap-3 bg-[#1DB954] text-black px-8 py-3.5 rounded-full font-bold hover:bg-[#1ed760] transition-colors hover:scale-105 transform duration-200">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15.001 10.62 18.72 12.9c.36.181.54.841.241 1.14zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.539-1.56.299z"/></svg>
+                        Spotify
+                    </a>
+                    <!-- Apple Music -->
+                    <a href="https://music.apple.com/us/album/the-sound-of-survival/6822568987?ls" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto flex items-center justify-center gap-3 bg-[#FA243C] text-white px-8 py-3.5 rounded-full font-bold hover:bg-[#ff3b51] transition-colors hover:scale-105 transform duration-200">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.152 6.896c-.022-2.82 2.296-4.17 2.404-4.237-1.31-1.92-3.342-2.18-4.045-2.217-1.722-.172-3.364.996-4.248.996-.883 0-2.228-.975-3.642-.947-1.84.025-3.535 1.07-4.484 2.716-1.92 3.328-.49 8.257 1.38 10.957.915 1.315 1.992 2.793 3.394 2.738 1.353-.056 1.865-.877 3.407-.877 1.54 0 2.016.877 3.444.85 1.464-.028 2.395-1.332 3.292-2.652 1.042-1.523 1.47-3.003 1.493-3.082-.03-.016-2.883-1.106-2.905-4.245zM10.232 4.195c.762-.924 1.275-2.207 1.135-3.486-1.09.044-2.427.728-3.212 1.65-.705.82-1.316 2.13-.157 3.38 1.222.095 2.476-.62 3.234-1.544z"/></svg>
+                        Apple Music
+                    </a>
+                    <!-- Amazon Music -->
+                    <a href="https://music.amazon.com/albums/B0HMYZ77DW?ref=dm_sh_Jz48Bs6SxQUcAggN1PDYjJ9yo" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto flex items-center justify-center gap-3 bg-[#00A8E1] text-black px-8 py-3.5 rounded-full font-bold hover:bg-[#13b5eb] transition-colors hover:scale-105 transform duration-200">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
+                        Amazon Music
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div> <!-- End Home Sections (Part 1) -->
+
+    <!-- Tour Section Wrapper -->
+    <div class="page-view page-tour hidden w-full">
+
+    <!-- Tour & Media Section -->
+    <section id="tour" class="py-24 bg-zinc-900 border-t border-zinc-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                
+                <!-- Left Column: Compact Tour Dates -->
+                <div>
+                    <div class="flex justify-between items-end mb-8 border-b border-zinc-800 pb-4">
+                        <div>
+                            <h2 class="text-2xl md:text-3xl font-bold text-white uppercase tracking-widest mb-1">Live on Tour</h2>
+                            <p class="text-zinc-400 text-sm">Catch us in a city near you.</p>
+                        </div>
+                        <p class="text-rose-500 font-bold text-xs tracking-widest uppercase">NA 2027</p>
+                    </div>
+
+                    <!-- Compact Tour Dates List -->
+                    <div class="space-y-3">
+                        <!-- Date 1 -->
+                        <div class="flex items-center justify-between bg-zinc-950/50 p-4 rounded-xl hover:bg-zinc-800/80 transition-colors border border-zinc-800/50">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 text-center">
+                                    <span class="block text-rose-500 font-bold uppercase text-xs tracking-widest">Oct</span>
+                                    <span class="block text-xl font-light text-white">31</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-base font-bold text-white leading-tight">The Roxy Theatre</h3>
+                                    <p class="text-zinc-400 text-sm">Los Angeles, CA</p>
+                                </div>
+                            </div>
+                            <a href="#" class="bg-transparent border border-zinc-500 text-zinc-300 text-xs px-4 py-2 rounded-full font-bold uppercase tracking-wide hover:bg-white hover:text-zinc-950 hover:border-white transition-colors">Tickets</a>
+                        </div>
+
+                        <!-- Date 2 -->
+                        <div class="flex items-center justify-between bg-zinc-950/50 p-4 rounded-xl hover:bg-zinc-800/80 transition-colors border border-zinc-800/50">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 text-center">
+                                    <span class="block text-rose-500 font-bold uppercase text-xs tracking-widest">Nov</span>
+                                    <span class="block text-xl font-light text-white">05</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-base font-bold text-white leading-tight">Bowery Ballroom</h3>
+                                    <p class="text-zinc-400 text-sm">New York, NY</p>
+                                </div>
+                            </div>
+                            <a href="#" class="bg-transparent border border-zinc-500 text-zinc-300 text-xs px-4 py-2 rounded-full font-bold uppercase tracking-wide hover:bg-white hover:text-zinc-950 hover:border-white transition-colors">Tickets</a>
+                        </div>
+
+                        <!-- Date 3 -->
+                        <div class="flex items-center justify-between bg-zinc-950/50 p-4 rounded-xl hover:bg-zinc-800/80 transition-colors border border-zinc-800/50">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 text-center">
+                                    <span class="block text-rose-500 font-bold uppercase text-xs tracking-widest">Nov</span>
+                                    <span class="block text-xl font-light text-white">12</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-base font-bold text-white leading-tight">Metro</h3>
+                                    <p class="text-zinc-400 text-sm">Chicago, IL</p>
+                                </div>
+                            </div>
+                            <span class="bg-zinc-800 text-zinc-500 text-xs px-4 py-2 rounded-full font-bold uppercase tracking-wide cursor-not-allowed">Sold Out</span>
+                        </div>
+                        
+                        <div class="pt-4">
+                            <a href="#" class="text-rose-500 text-sm font-bold uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2">
+                                View All Dates
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Media Gallery -->
+                <div>
+                    <div class="flex justify-between items-end mb-8 border-b border-zinc-800 pb-4">
+                        <div>
+                            <h2 class="text-2xl md:text-3xl font-bold text-white uppercase tracking-widest mb-1">Gallery</h2>
+                            <p class="text-zinc-400 text-sm">Sights & Sounds</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-3">
+                        <!-- Featured Video Placeholder -->
+                        <div class="col-span-2 relative aspect-video bg-zinc-950 rounded-xl overflow-hidden group cursor-pointer border border-zinc-800">
+                            <img src="https://placehold.co/800x450/09090b/3f3f46?text=Latest+Music+Video" alt="Music Video" class="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-300">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-16 h-16 bg-rose-600/90 text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(225,29,72,0.5)] group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-4 left-4">
+                                <span class="bg-black/80 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded uppercase tracking-widest">Watch</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Image 1 Placeholder -->
+                        <div class="aspect-square bg-zinc-950 rounded-xl overflow-hidden group border border-zinc-800">
+                            <img src="https://placehold.co/400x400/18181b/3f3f46?text=Live+Shot+1" alt="Live Shot" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                        </div>
+                        
+                        <!-- Image 2 Placeholder -->
+                        <div class="aspect-square bg-zinc-950 rounded-xl overflow-hidden group border border-zinc-800 relative">
+                            <img src="https://placehold.co/400x400/18181b/3f3f46?text=Live+Shot+2" alt="Live Shot 2" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="text-white font-bold tracking-widest uppercase text-sm">View More</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    </div> <!-- End Tour Section Wrapper -->
+
+    <!-- Home Sections (Unreleased) -->
+    <div class="page-view page-home w-full">
+
+    <!-- Unreleased/Newsletter Section -->
+    <section id="exclusive" class="py-24 bg-gradient-to-br from-zinc-950 to-zinc-900 relative overflow-hidden">
+        <!-- Abstract shape -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-rose-600/10 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl"></div>
+
+        <div class="max-w-3xl mx-auto px-4 text-center relative z-10">
+            <svg class="w-12 h-12 mx-auto text-rose-500 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8V7a4 4 0 00-8 0v4h8z"></path></svg>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 uppercase tracking-widest">The Inner Circle</h2>
+            <p class="text-lg text-zinc-400 mb-10 max-w-xl mx-auto">
+                Sign up for our mailing list to receive <span class="text-white font-semibold">unreleased songs, secret show invites</span>, and priority access to tour tickets. We promise not to spam you.
+            </p>
+            <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto" action="https://formsubmit.co/AClearerViewmusic@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="New Fan Newsletter Signup!">
+                <input type="email" name="email" placeholder="Enter your email address" required class="flex-grow bg-zinc-900 border border-zinc-700 text-white px-6 py-4 rounded-full focus:outline-none focus:border-rose-500 transition-colors placeholder-zinc-500">
+                <button type="submit" class="bg-rose-600 text-white px-8 py-4 rounded-full font-bold uppercase tracking-wide hover:bg-rose-700 transition-colors whitespace-nowrap">Join Now</button>
+            </form>
+        </div>
+    </section>
+
+    </div> <!-- End Home Sections (Part 2) -->
+
+    <!-- Contact Section Wrapper -->
+    <div class="page-view page-contact hidden w-full">
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-zinc-950 border-t border-zinc-900">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 uppercase tracking-widest">Get In Touch</h2>
+                <p class="text-zinc-400">Booking, press, or just want to say hi? Drop us a line.</p>
+            </div>
+            
+            <form class="space-y-6 bg-zinc-900/50 p-8 rounded-2xl border border-zinc-800" action="https://formsubmit.co/AClearerViewmusic@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="New Contact Form Message">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-semibold text-zinc-400 uppercase tracking-wide mb-2">Name</label>
+                        <input type="text" name="name" class="w-full bg-zinc-950 border border-zinc-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:border-purple-500 transition-colors" placeholder="Your Name" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-zinc-400 uppercase tracking-wide mb-2">Email</label>
+                        <input type="email" name="email" class="w-full bg-zinc-950 border border-zinc-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:border-purple-500 transition-colors" placeholder="your@email.com" required>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-zinc-400 uppercase tracking-wide mb-2">Subject</label>
+                    <select name="subject" class="w-full bg-zinc-950 border border-zinc-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:border-purple-500 transition-colors appearance-none">
+                        <option value="General Inquiry">General Inquiry</option>
+                        <option value="Booking">Booking</option>
+                        <option value="Press / Media">Press / Media</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-zinc-400 uppercase tracking-wide mb-2">Message</label>
+                    <textarea name="message" rows="5" class="w-full bg-zinc-950 border border-zinc-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:border-purple-500 transition-colors resize-none" placeholder="What's on your mind?" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-white text-zinc-950 py-4 rounded-lg font-bold uppercase tracking-wide hover:bg-zinc-200 transition-colors mt-4">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    </div> <!-- End Contact Section Wrapper -->
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 mt-auto border-t border-zinc-900">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <a href="#home" class="text-2xl font-black text-white tracking-widest uppercase">A CLEARER VIEW</a>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="flex space-x-6">
+                <a href="https://instagram.com/a_clearer_view" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-white transition-colors">
+                    <span class="sr-only">Instagram</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.822a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <a href="https://x.com/aclearerview" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-white transition-colors">
+                    <span class="sr-only">Twitter</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                </a>
+                <a href="#" class="text-zinc-500 hover:text-white transition-colors">
+                    <span class="sr-only">YouTube</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 mt-8 pt-8 border-t border-zinc-900 text-sm text-center text-zinc-600 font-semibold tracking-wider uppercase">
+            &copy; 2027 A Clearer View. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- SPA Routing Script -->
+    <script>
+        function handleRouting() {
+            const hash = window.location.hash || '#home';
+            
+            // Hide all pages
+            document.querySelectorAll('.page-view').forEach(el => el.classList.add('hidden'));
+            
+            // Determine target page class based on the hash
+            let targetClass = '.page-home';
+            if (hash === '#tour') targetClass = '.page-tour';
+            if (hash === '#contact') targetClass = '.page-contact';
+            
+            // Show target page sections
+            document.querySelectorAll(targetClass).forEach(el => el.classList.remove('hidden'));
+            
+            // Smooth scroll if an anchor within the home page is clicked (like #music or #exclusive)
+            if (targetClass === '.page-home' && hash !== '#home' && hash !== '') {
+                const targetEl = document.querySelector(hash);
+                if(targetEl) {
+                    setTimeout(() => targetEl.scrollIntoView({ behavior: 'smooth' }), 50);
+                }
+            } else {
+                window.scrollTo(0, 0); // Scroll to top for new pages
+            }
+        }
+
+        // Listen for navigation clicks and initial load
+        window.addEventListener('hashchange', handleRouting);
+        window.addEventListener('load', handleRouting);
+    </script>
+
+</body>
+</html>```
